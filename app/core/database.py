@@ -1,17 +1,13 @@
 from motor.motor_asyncio import AsyncIOMotorClient
-from fastapi import FastAPI
+from dotenv import load_dotenv
+import os
 
-class Database:
-    def __init__(self, app: FastAPI):
-        self.app = app
-        self.client: AsyncIOMotorClient = None
-        self.db = None
+load_dotenv()
 
-    async def connect(self):
-        self.client = AsyncIOMotorClient("mongodb://mongo:27017")
-        self.db = self.client.routes_db
+DB_USER = os.getenv("DB_USER")
+DB_PASSWORD = os.getenv("DB_PASSWORD")
 
-    async def disconnect(self):
-        self.client.close()
+MONGO_URI = f"mongodb://{DB_USER}:{DB_PASSWORD}@localhost:27017"  
 
-db = Database(app)
+client = AsyncIOMotorClient(MONGO_URI)
+db = client.get_database()  
