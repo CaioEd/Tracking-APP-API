@@ -28,9 +28,8 @@ Você só será cobrado se ultrapassar esse valor, e é possível configurar ale
   <br>
 2) Criar e ativar ambiente virtual 
 <br>
-3) Rode o Fast API com: make run
-<br>
-4) Rode o container do MongoDB com: make database
+3) Rode o Fast API e o Mongo DB com: make run
+
 
 ## Comunicação da aplicação
 ![tracking](https://github.com/user-attachments/assets/1c191f3f-4cd7-414f-b03b-42b4b1544d50)
