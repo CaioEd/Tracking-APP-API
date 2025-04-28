@@ -1,0 +1,59 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg
+*.egg-info/
+dist/
+build/
+*.pyo
+*.pyd
+*.env
+.env
+.env.*
+
+# VSCode
+.vscode/
+
+# MongoDB (caso use dumps locais ou arquivos de backup)
+*.mongodb
+dump/
+*.bson
+
+# Pydantic cache
+*.mypy_cache/
+*.pytest_cache/
+.dmypy.json
+.pyre/
+
+# Logs
+*.log
+
+# Sistema
+.DS_Store
+Thumbs.db
+
+# virtualenv
+venv/
+env/
+ENV/
+
+# Google credentials
+credentials.json
+token.json
+client_secrets.json
+
+# Docker (caso use)
+*.pid
+*.sock
+
+# Testes
+htmlcov/
+coverage.xml
+.cache/
+.tox/
+.pytest_cache/
+
+# IDEs
+.idea/
+*.iml
+
