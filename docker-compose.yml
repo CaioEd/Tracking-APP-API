@@ -2,7 +2,7 @@ version: "3.8"
 services:
   mongo:
     image: mongo:latest
-    container_name: mongo
+    container_name: tracking_mongo
     ports:
       - "27017:27017"
     volumes:
