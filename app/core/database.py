@@ -1,13 +1,23 @@
-from motor.motor_asyncio import AsyncIOMotorClient
-from dotenv import load_dotenv
 import os
+from pymongo import MongoClient
+from dotenv import load_dotenv
 
 load_dotenv()
 
-DB_USER = os.getenv("DB_USER")
-DB_PASSWORD = os.getenv("DB_PASSWORD")
+class Database:
+    def __init__(self):
+        self.client = MongoClient(
+            os.getenv("DATABASE_URL"),
+            username=os.getenv("DB_USER"),
+            password=os.getenv("DB_PASSWORD"),
+            authSource='admin'
+        )
+        self.db = self.client[os.getenv("DATABASE_NAME")]
 
-MONGO_URI = f"mongodb://{DB_USER}:{DB_PASSWORD}@localhost:27017"  
+    def get_db(self):
+        return self.db
+    
+    def close(self):
+        self.client.close()
 
-client = AsyncIOMotorClient(MONGO_URI)
-db = client.get_database()  
+database = Database() 

@@ -7,11 +7,13 @@ services:
     ports:
       - "27017:27017"
     environment:
+      MONGO_INITDB_DATABASE: tracking_db
       MONGO_INITDB_ROOT_USERNAME: root
       MONGO_INITDB_ROOT_PASSWORD: secretmongo
+      
     volumes:
       - mongo-data:/data/db
 
 volumes:
-  mongo-data:W
+  mongo-data:
     driver: local
