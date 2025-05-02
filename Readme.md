@@ -34,5 +34,5 @@ Você só será cobrado se ultrapassar esse valor, e é possível configurar ale
 
 
 ## Comunicação da aplicação
-![tracking](https://github.com/user-attachments/assets/1c191f3f-4cd7-414f-b03b-42b4b1544d50)
+![tracking](https://github.com/user-attachments/assets/cabd1133-d97c-4c42-8d9b-62a9b116fc77)
 
